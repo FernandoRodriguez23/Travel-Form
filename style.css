@@ -1,0 +1,17 @@
+form {
+    background-color: rgb(231, 224, 182);
+    border: thin solid black;
+    border-radius: 5px;
+    width: 500px;
+    display: flex;
+}
+
+input{
+    margin: 5px;
+}
+
+.submit{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
