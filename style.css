@@ -1,17 +1,47 @@
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    max-width: 85rem;
+
+    grid-template-areas: 
+    "form ListArea";
+}
+
 form {
     background-color: rgb(231, 224, 182);
-    border: thin solid black;
-    border-radius: 5px;
     width: 500px;
     display: flex;
 }
 
-input{
-    margin: 5px;
+fieldset {
+    width: 500px;
+    border-radius: 5px;
 }
 
 .submit{
     margin: auto;
     justify-content: center;
     align-items: center;
+}
+
+.ListArea{
+    border: solid 5px black;
+}
+
+div {
+    margin: 10px;
+}
+
+.food {
+    margin: 10px;
+}
+
+.check {
+    margin: 10px;
+}
+
+.print {
+    text-align: end;
 }
