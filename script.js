@@ -1,6 +1,6 @@
 
 class User{
-    constructor(fullname, birth, Dcity, Acity, Dleave, Dreturn, bags, meal, extras, id, drink){
+    constructor(fullname, birth, Dcity, Acity, Dleave, Dreturn, bags, meal, extras, id,){
         this.fullname = fullname;
         this.birth = birth;
         this.Dcity = Dcity;
@@ -11,15 +11,14 @@ class User{
         this.meal = meal;
         this.extras = extras;
         this.id = id;
-        this.drink = drink;
+        this.extrasCost = extrasCostT;
     }
 }
 
 let userlist = [];
 let userId = 1;
 let extraCostB = 0;
-let drink = false;
-let daysGone = 0;
+let extrasCostT = 0;
 
 function addToList() {
     let fullname = document.getElementById("name").value;
@@ -35,18 +34,28 @@ function addToList() {
     if(fullname != "" &&  birth != "" && Dcity != "" && Acity != "" && Dleave != "" && Dreturn != "" && bags != "" && meal != ""){
         let user = new User(fullname, birth, Dcity, Acity, Dleave, Dreturn, bags, meal, extras, id);
         userId++;
-        userlist.push();
+        userlist.push(user);
+        document.getElementById("name").value = "";
+        document.getElementById("birth").value = "";
+        document.getElementById("dcity").value = "";
+        document.getElementById("acity").value = "";
+        document.getElementById("dleave").value = "";
+        document.getElementById("dreturn").value = "";
+        document.getElementById("bags").value = "";
+        document.getElementById("meal").value = "";
+        document.getElementById("extras").value = "";
     }if(bags > 0){
         extraCostB + 20;
     }
+    
     checkExtras();
-    extraCostB + extraCostE;
+    extrasCostT = extraCostB + extraCostE;
 }   
 
 let extrasC = document.forms[0];
 let extraCostE = 0;
 function checkExtras() {
-    for(let i  =0; i < extrasC.length; i++){
+    for(let i  = 0; i < extrasC.length; i++){
         if(extrasC[i].checked){
             extraCostE + 10;
         }
@@ -54,12 +63,11 @@ function checkExtras() {
 }
 
 function print() {
-    listArea = document.getElementById("ListArea");
+    listArea = document.getElementById("printhere");
 
-    listArea.innerHTML = " ";
+    listArea.innerHTML = "";
     for(let i = 0; i < userlist.length; i++){
-        printSpace.innerHTML += `<div>${userlist[i].id} ${userlist[i].fullname} ${userlist[i].birth} ${userlist[i].Dcity} 
-        ${userlist[i].Acity} ${userlist[i].DLeave} ${userlist[i].Dreturn} ${userlist[i].bags} ${userlist[i].meal} ${userlist.extras}</div>`
-        
+        listArea.innerHTML += `<div>${userlist[i].id} ${userlist[i].fullname} ${userlist[i].birth} ${userlist[i].Dcity} 
+        ${userlist[i].Acity} ${userlist[i].DLeave} ${userlist[i].Dreturn} ${userlist[i].bags} ${userlist[i].meal}  $${userlist[i].extras} ${userlist.extrasCostT}</div>`
     }
 }

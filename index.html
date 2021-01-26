@@ -20,19 +20,19 @@
                     <h2>Passenger Information</h2>
                     <div class="Name">
                         <label for="Name">Full Name:</label>
-                        <input type="text" placeholder="FullName" id="name" value="Fernando">
+                        <input type="text" placeholder="FullName" id="name">
                     </div>
                     <div class="Birth">
                         <label for="Birth">Date of Birth:</label>
-                        <input type="text" placeholder="MM/DD/YYYY" id="birth" value="01/07/1999">
+                        <input type="text" placeholder="MM/DD/YYYY" id="birth">
                     </div>
                     <div class="Dcity">
                         <label for="Dcity">City of Departure:</label>
-                        <input type="text" placeholder="City, State (Phoenix, Az)" id="dcity" value="Phoenix,Az">
+                        <input type="text" placeholder="City, State (Phoenix, Az)" id="dcity">
                     </div>
                     <div class="Acity">
                         <label for="Acity">City of Arival:</label>
-                        <input type="text" placeholder="City, State (Seattle, Wa)" id="acity" value="Los Angles, Ca">
+                        <input type="text" placeholder="City, State (Seattle, Wa)" id="acity">
                     </div>
                     <div class="DLeave">
                         <label for="Dleave">Date of Departure:</label>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="Bags">
                         <label for="Bags">Number of Bags:</label>
-                        <input type="text" id="bags" value="3">
+                        <input type="text" id="bags">
                     </div>
                     <div class="Meal" id="meal">
                         <p>What Meal would you like?</p>
@@ -67,16 +67,19 @@
                         <input type="checkbox" name="Extras" id="drinks" class="check">
                         <label for="Pillow">Pillow</label>
                         <input type="checkbox" name="Extras" id="pillow" class="check">
-                    </div><br>
+                    </div>
                     <button type="submit" class="submit" onclick="addToList()">Submit Information</button>
                 </fieldset>
             </form>
     
             <div class="ListArea" id="ListArea">
-                
-            </div>
-            <div class="print">
-                <button type="submit" class="print" onclick="print()">Print</button>
+                <div class="print">
+                    <input type="search" placeholder="Search.." name="search">
+                    <button type="submit" class="print" onclick="print()">Print Names</button>
+                </div>
+                <div id="printhere">
+
+                </div>
             </div>
         </div>
         

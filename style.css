@@ -28,20 +28,23 @@ fieldset {
 
 .ListArea{
     border: solid 5px black;
+    max-width: 700px;
 }
 
 div {
     margin: 10px;
+    color: black;
 }
 
 .food {
-    margin: 10px;
+    margin: 5px;
 }
 
 .check {
-    margin: 10px;
+    margin: 5px;
 }
 
 .print {
-    text-align: end;
+    text-align: center;
+    margin-left: 10px;
 }
