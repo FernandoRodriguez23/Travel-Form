@@ -1,12 +1,13 @@
 
 .wrapper{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
     max-width: 85rem;
 
     grid-template-areas: 
-    "form ListArea";
+    "form" 
+    "submit ListArea";
 }
 
 form {
@@ -21,9 +22,7 @@ fieldset {
 }
 
 .submit{
-    margin: auto;
-    justify-content: center;
-    align-items: center;
+    display: flex;
 }
 
 .ListArea{

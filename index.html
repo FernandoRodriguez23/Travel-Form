@@ -20,19 +20,19 @@
                     <h2>Passenger Information</h2>
                     <div class="Name">
                         <label for="Name">Full Name:</label>
-                        <input type="text" placeholder="FullName" id="name">
+                        <input type="text" placeholder="FullName" id="name" value="Herman the German">
                     </div>
                     <div class="Birth">
                         <label for="Birth">Date of Birth:</label>
-                        <input type="text" placeholder="MM/DD/YYYY" id="birth">
+                        <input type="text" placeholder="MM/DD/YYYY" id="birth" value="09/21/1980">
                     </div>
                     <div class="Dcity">
                         <label for="Dcity">City of Departure:</label>
-                        <input type="text" placeholder="City, State (Phoenix, Az)" id="dcity">
+                        <input type="text" placeholder="City, State (Phoenix, Az)" id="dcity" value="Nashville,Tn">
                     </div>
                     <div class="Acity">
                         <label for="Acity">City of Arival:</label>
-                        <input type="text" placeholder="City, State (Seattle, Wa)" id="acity">
+                        <input type="text" placeholder="City, State (Seattle, Wa)" id="acity" value="Miami,Fl">
                     </div>
                     <div class="DLeave">
                         <label for="Dleave">Date of Departure:</label>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="Bags">
                         <label for="Bags">Number of Bags:</label>
-                        <input type="text" id="bags">
+                        <input type="text" id="bags" value="2">
                     </div>
                     <div class="Meal" id="meal">
                         <p>What Meal would you like?</p>
@@ -68,9 +68,13 @@
                         <label for="Pillow">Pillow</label>
                         <input type="checkbox" name="Extras" id="pillow" class="check">
                     </div>
-                    <button type="submit" class="submit" onclick="addToList()">Submit Information</button>
+                    
                 </fieldset>
             </form>
+            <div>
+                <button class="submit" onclick="addToList()">Submit Information</button>
+            </div>
+            
     
             <div class="ListArea" id="ListArea">
                 <div class="print">
@@ -83,6 +87,7 @@
             </div>
         </div>
         
+
         <script src="script.js"></script>
     </body>
 </html>
