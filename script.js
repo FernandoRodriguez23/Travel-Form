@@ -42,6 +42,7 @@ function addToList() {
         document.getElementById("dleave").value = "";
         document.getElementById("dreturn").value = "";
         document.getElementById("bags").value = "";
+        document.getElementById("meal").value = "";
         document.getElementById("extras").value = "";
     }if(bags > 0){
         extraCostB + 20;
@@ -55,8 +56,16 @@ function checkMeal() {
     let meal = document.getElementsByName("Meal");
 
     for(let i = 0; i < meal.length; i++){
-        if(meal[i].value){
-            document.getElementsByName("Meal").value = "";
+        if(meal = document.getElementById("steak").checked){
+            meal = document.getElementById("steak").value;
+        }if(meal = document.getElementById("fish").checked){
+            meal = document.getElementById("fish").value;
+        }if(meal = document.getElementById("chicken").checked){
+            meal = document.getElementById("chicken").value;
+        }if(meal = document.getElementById("plant").checked){
+            meal = document.getElementById("plant").value;
+        }else{
+            meal = `No Meal Selected`;
         }
     }
 }
