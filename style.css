@@ -1,5 +1,5 @@
 
-.wrapper{
+.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
@@ -20,11 +20,11 @@ fieldset {
     border-radius: 5px;
 }
 
-.submit{
+.submit {
     display: flex;
 }
 
-.ListArea{
+.ListArea {
     border: solid 5px black;
     max-width: 700px;
 }
